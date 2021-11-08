@@ -89,12 +89,22 @@ function finalScore(inningcb, num){
     Home: inningcb(),
     Away: inningcb(),
   }
+  const totalScore = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  
   for(let i = 0;i < num; i++){
-    i++
+    const currentScore = score;
+    homeScore = homeScore + currentScore.Home;
+    awayScore = awayScore + currentScore.Away;
+    totalScore.push(i+1)
   }
   return score
 }
-//console.log(finalScore(inning, 9))
+console.log(finalScore(inning, 9))
+console.log(finalScore(inning, 6))
+console.log(finalScore(inning, 4))
+console.log(finalScore(inning, 7))
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
@@ -151,7 +161,7 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
+function scoreboard() {
   /* CODE HERE */
 }
 
